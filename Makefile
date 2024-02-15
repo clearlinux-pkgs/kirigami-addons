@@ -1,5 +1,5 @@
 PKG_NAME := kirigami-addons
-URL = https://github.com/KDE/kirigami-addons/archive/refs/tags/v0.9.0.tar.gz
+URL = https://download.kde.org/stable/kirigami-addons/kirigami-addons-0.11.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
