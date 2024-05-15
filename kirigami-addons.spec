@@ -8,11 +8,11 @@
 # Source0 file verified with key 0x02325448204E452A (carl@carlschwan.eu)
 #
 Name     : kirigami-addons
-Version  : 1.2.0
-Release  : 6
-URL      : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.0.tar.xz
-Source0  : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.0.tar.xz
-Source1  : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.0.tar.xz.sig
+Version  : 1.2.1
+Release  : 7
+URL      : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.1.tar.xz
+Source0  : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.1.tar.xz
+Source1  : https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.2.1.tar.xz.sig
 Source2  : 02325448204E452A.pkey
 Summary  : No detailed summary available
 Group    : Development/Tools
@@ -77,15 +77,15 @@ chmod 700 .gnupg
 gpg --homedir .gnupg --import %{SOURCE2}
 gpg --homedir .gnupg --status-fd 1 --verify %{SOURCE1} %{SOURCE0} > gpg.status
 grep -E '^\[GNUPG:\] (GOODSIG|EXPKEYSIG) 02325448204E452A' gpg.status
-%setup -q -n kirigami-addons-1.2.0
-cd %{_builddir}/kirigami-addons-1.2.0
+%setup -q -n kirigami-addons-1.2.1
+cd %{_builddir}/kirigami-addons-1.2.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1715695470
+export SOURCE_DATE_EPOCH=1715783186
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -122,7 +122,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1715695470
+export SOURCE_DATE_EPOCH=1715783186
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kirigami-addons
 cp %{_builddir}/kirigami-addons-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kirigami-addons/ea97eb88ae53ec41e26f8542176ab986d7bc943a || :
